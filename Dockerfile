@@ -18,6 +18,12 @@ RUN apt-get update && \
   ln -s /etc/php/5.6/mods-available/redis.ini /etc/php/5.6/apache2/conf.d/ && \
   ln -s /etc/php/5.6/mods-available/redis.ini /etc/php/5.6/cli/conf.d/ && \
 
+  # yaml
+  apt-get install -y libyaml-dev && \
+  pecl install yaml-1.3.0 && \
+  echo "extension=yaml.so" >> /etc/php/5.6/mods-available/php.ini && \
+  echo "extension=yaml.so" >> /etc/php/5.6/cli/php.ini && \
+
   # mysql
   apt-get install -y mysql-client && \
   apt-get install -y php5.6-mysql && \
