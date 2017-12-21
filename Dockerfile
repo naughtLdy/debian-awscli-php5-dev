@@ -1,4 +1,4 @@
-FROM naughtldy/debian-awscli-php5:latest
+FROM naughtldy/debian-awscli-php5:8
 
 RUN apt-get update && \
 
