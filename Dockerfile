@@ -23,6 +23,8 @@ RUN apt-get update && \
   pecl install yaml-1.3.0 && \
   echo "extension=yaml.so" >> /etc/php/5.6/mods-available/php.ini && \
   echo "extension=yaml.so" >> /etc/php/5.6/cli/php.ini && \
+  # mbstring
+  apt-get install -y php5.6-mbstring && \
   echo "extension=php_mbstring.so" >> /etc/php/5.6/mods-available/php.ini && \
   echo "extension=php_mbstring.so" >> /etc/php/5.6/cli/php.ini && \
 
